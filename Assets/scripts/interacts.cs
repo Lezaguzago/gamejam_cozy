@@ -6,6 +6,8 @@ public class interacts : MonoBehaviour
     public DialogueRunner dia;
     public string who;
     public bool conv;
+
+    public bool estaConversando = false;
     
     public Animator anima;
 
@@ -23,6 +25,16 @@ public class interacts : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void comecoFala()
+    {
+        estaConversando = true;
+    }
+
+    public void fimFala()
+    {
+        estaConversando = false;
     }
 
     public void fala(int quemFala)
@@ -44,13 +56,16 @@ public class interacts : MonoBehaviour
 
     public void interact()
     {
-        if (conv == true)
+        if (estaConversando == false)
         {
-            dia.StartDialogue(who);
-        }
+            if (conv == true)
+            {
+                dia.StartDialogue(who);
+            }
 
-        else if(conv == false && anima != null){
-            anima.SetBool("interagir", true);
+            else if(conv == false && anima != null){
+                anima.SetBool("interagir", true);
+            }
         }
     }
 
