@@ -45,10 +45,19 @@ public class Asteroid : MonoBehaviour
                 }
             }
 
+            GeralManager.instance.pontos += 10 * size;
+
             // Spawn particles on destruction.
             Instantiate(destroyedParticles, transform.position, Quaternion.identity);
 
             // Destroy this asteroid.
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.instance.asteroidCount--;
+            GeralManager.instance.pontos -= 10 * size;
+            Instantiate(destroyedParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

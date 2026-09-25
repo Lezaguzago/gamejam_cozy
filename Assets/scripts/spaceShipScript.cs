@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class spaceShipScript : MonoBehaviour
 {
@@ -20,18 +21,21 @@ public class spaceShipScript : MonoBehaviour
         input = new Player_actions();
         input.SpaceShip.Look.performed += ShipRotation;
         input.SpaceShip.ShootInteract.performed += ShipFire;
+        input.SpaceShip.GoBack.performed += Inside;
     }
 
     private void OnEnable()
     {
         input.SpaceShip.Look.performed += ShipRotation;
         input.SpaceShip.ShootInteract.performed += ShipFire;
+        input.SpaceShip.GoBack.performed += Inside;
         input.Enable();
     }
     private void OnDisable()
     {
         input.SpaceShip.Look.performed -= ShipRotation;
         input.SpaceShip.ShootInteract.performed -= ShipFire;
+        input.SpaceShip.GoBack.performed -= Inside;
         input.Disable();
     }
     void Start()
@@ -85,6 +89,14 @@ public class spaceShipScript : MonoBehaviour
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxShipSpeed);
             Rigidbody2D fire = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
             fire.AddForce(bulletSpeed * transform.right, ForceMode2D.Impulse);
+        }
+    }
+
+    void Inside(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            SceneManager.LoadScene("nave");
         }
     }
 }

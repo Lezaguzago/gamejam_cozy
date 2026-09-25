@@ -1,13 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Asteroid asteroidPrefab;
+    [SerializeField] private Help helpPrefab;
     public int asteroidCount = 0;
+    int willSpawn;
     private int level = 0;
     public static GameManager instance;
-
     private void Awake()
     {
         if (instance != null)
@@ -21,15 +23,15 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        // If there are no asteroids left, spawn more!
         if (asteroidCount == 0)
         {
+            willSpawn = Random.Range(1, 5);
             // Increase the level.
             level++;
 
             // Spawn the correct number for this level.
             // 1=>4, 2=>6, 3=>8, 4=>10 ...
-            int numAsteroids = 2 + (2 * level);
+            int numAsteroids = 1 + level;
             for (int i = 0; i < numAsteroids; i++)
             {
                 SpawnAsteroid();
@@ -66,5 +68,13 @@ public class GameManager : MonoBehaviour
         Vector2 worldSpawnPosition = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
         Asteroid asteroid = Instantiate(asteroidPrefab, worldSpawnPosition, Quaternion.identity);
         asteroid.gameManager = this;
+
+        if(willSpawn > 2)
+        {
+            Vector2 worldSpawnPos = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
+            Help help = Instantiate(helpPrefab, worldSpawnPosition, Quaternion.identity);
+        }
+        willSpawn = 0;
     }
+
 }

@@ -938,6 +938,16 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": true,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""GoBack"",
+                    ""type"": ""Button"",
+                    ""id"": ""654980c1-b40b-46f8-951d-9ef7eba6e14a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -1015,6 +1025,17 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""718e6263-ee79-42bd-9e0a-260b39ae81f5"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GoBack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1106,6 +1127,7 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
         m_SpaceShip = asset.FindActionMap("SpaceShip", throwIfNotFound: true);
         m_SpaceShip_ShootInteract = m_SpaceShip.FindAction("Shoot/Interact", throwIfNotFound: true);
         m_SpaceShip_Look = m_SpaceShip.FindAction("Look", throwIfNotFound: true);
+        m_SpaceShip_GoBack = m_SpaceShip.FindAction("GoBack", throwIfNotFound: true);
     }
 
     ~@Player_actions()
@@ -1514,6 +1536,7 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
     private List<ISpaceShipActions> m_SpaceShipActionsCallbackInterfaces = new List<ISpaceShipActions>();
     private readonly InputAction m_SpaceShip_ShootInteract;
     private readonly InputAction m_SpaceShip_Look;
+    private readonly InputAction m_SpaceShip_GoBack;
     /// <summary>
     /// Provides access to input actions defined in input action map "SpaceShip".
     /// </summary>
@@ -1533,6 +1556,10 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "SpaceShip/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_SpaceShip_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "SpaceShip/GoBack".
+        /// </summary>
+        public InputAction @GoBack => m_Wrapper.m_SpaceShip_GoBack;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1565,6 +1592,9 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @GoBack.started += instance.OnGoBack;
+            @GoBack.performed += instance.OnGoBack;
+            @GoBack.canceled += instance.OnGoBack;
         }
 
         /// <summary>
@@ -1582,6 +1612,9 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @GoBack.started -= instance.OnGoBack;
+            @GoBack.performed -= instance.OnGoBack;
+            @GoBack.canceled -= instance.OnGoBack;
         }
 
         /// <summary>
@@ -1815,5 +1848,12 @@ public partial class @Player_actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "GoBack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGoBack(InputAction.CallbackContext context);
     }
 }
