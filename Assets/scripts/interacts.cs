@@ -1,5 +1,6 @@
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class interacts : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class interacts : MonoBehaviour
     public bool estaConversando = false;
     
     public Animator anima;
+
+    
 
 
     public void Awake()
@@ -65,6 +68,12 @@ public class interacts : MonoBehaviour
 
             else if(conv == false && anima != null){
                 anima.SetBool("interagir", true);
+            }
+
+            else if(who == "terminal")
+            {
+                SceneManager.LoadScene("Space");
+
             }
         }
     }
