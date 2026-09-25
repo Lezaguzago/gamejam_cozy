@@ -10,6 +10,10 @@ public class interacts : MonoBehaviour
     public Animator anima;
 
 
+    public void Awake()
+    {
+        dia.AddCommandHandler<int>("quemFala", fala);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +23,23 @@ public class interacts : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void fala(int quemFala)
+    {
+        Debug.Log(quemFala);
+        if (quemFala == 2)
+        {
+            anima.SetBool("charFalando", true);
+        }
+        else if(quemFala == 1)
+        {
+            anima.SetBool("charFalando", false);
+        }
+        else if(quemFala == 0)
+        {
+            anima.SetBool("charFalando", false);
+        }
     }
 
     public void interact()
@@ -39,6 +60,8 @@ public class interacts : MonoBehaviour
         if (collision.gameObject.tag == "personagem")
         {
             conv = true;
+            anima = collision.gameObject.GetComponent<Animator>();
+
         }
 
         else if(collision.gameObject.tag == "objeto")

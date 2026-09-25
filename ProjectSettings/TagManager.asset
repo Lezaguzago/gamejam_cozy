@@ -6,6 +6,7 @@ TagManager:
   tags:
   - personagem
   - objeto
+  - escada
   layers:
   - Default
   - TransparentFX
