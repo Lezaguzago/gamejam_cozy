@@ -16,6 +16,7 @@ public class GeralManager : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
     void Start()
