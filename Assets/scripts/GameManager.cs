@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Asteroid asteroidPrefab;
     [SerializeField] Help helpPrefab;
     [SerializeField] List<Sprite> spriteList;
+    public bool isSpawned = false;
     public int asteroidCount = 0;
-    int willSpawn;
     private int level = 0;
     public static GameManager instance;
     private void Awake()
@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     {
         if (asteroidCount == 0)
         {
-            willSpawn = Random.Range(1, 5);
-
             level++;
 
             int numAsteroids = 1 + level;
@@ -72,12 +70,12 @@ public class GameManager : MonoBehaviour
             sr.sprite = spriteList[randomIndex];
         }
 
-        if (willSpawn > 2)
+        if (level%2 == 0 && !isSpawned)
         {
+            isSpawned = true;
             Vector2 worldSpawnPos = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
             Help help = Instantiate(helpPrefab, worldSpawnPosition, Quaternion.identity);
         }
-        willSpawn = 0;
     }
 
 }

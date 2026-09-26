@@ -1142,7 +1142,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 964304396}
   m_SourcePrefab: {fileID: 100100000, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
 --- !u!1 &960017866
 GameObject:
@@ -1286,8 +1289,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -809429055
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -1593,6 +1596,24 @@ MonoBehaviour:
   Bluep: {fileID: 8300000, guid: e86a431e3b9a6be4b8018f4ed1e853aa, type: 3}
   whoAudio: 
   dia: {fileID: 480883360}
+--- !u!1 &964304390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+  m_PrefabInstance: {fileID: 910946338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &964304396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964304390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a384a5a739e14b82ae38dd94fe0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceShipAliens
+  spawnThis: 1
 --- !u!1 &1034777094
 GameObject:
   m_ObjectHideFlags: 0

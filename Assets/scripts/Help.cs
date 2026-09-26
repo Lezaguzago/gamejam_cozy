@@ -23,6 +23,7 @@ public class Help : MonoBehaviour
         {
             GeralManager.instance.saved = true;
             GeralManager.instance.lifeSaveds += 1;
+            GameManager.instance.isSpawned = false;
             Destroy(gameObject);
         }
     }
