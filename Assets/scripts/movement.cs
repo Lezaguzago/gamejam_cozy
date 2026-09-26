@@ -17,6 +17,8 @@ public class movement : MonoBehaviour
     [SerializeField] private bool escalando;
     [SerializeField]private bool escada;
 
+    [SerializeField] private SpriteRenderer sr;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +36,16 @@ public class movement : MonoBehaviour
         if (escada == true && Mathf.Abs(verticalMovement) > 0)
         {
             escalando = true;
+        }
+
+        if (horizontalMovement > 0)
+        {
+            sr.flipX = true;
+        }
+
+        else if (horizontalMovement < 0)
+        {
+            sr.flipX = false;
         }
     }
 

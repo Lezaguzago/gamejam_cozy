@@ -46,11 +46,11 @@ public class audiosPlay : MonoBehaviour
     }
     public void fala(int quemFala)
     {
-        if (quemFala == 1)
+        if (quemFala == 2)
         {
             source.PlayOneShot(esse);
         }
-        else if (quemFala == 2)
+        else if (quemFala == 1)
         {
             source.PlayOneShot(player);
         }
