@@ -7,19 +7,20 @@ public class audiosPlay : MonoBehaviour
     public AudioSource source;
     public AudioClip player;
     public AudioClip Bluep;
+    private AudioClip esse;
     public string whoAudio;
 
     public DialogueRunner dia;
 
         public void Awake()
     {
-        dia.AddCommandHandler<int>("quemFala", fala);
+        dia.AddCommandHandler<int>("quemFalaAudio", fala);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,16 +33,26 @@ public class audiosPlay : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         whoAudio = collision.name; 
+        if (whoAudio == "Bluep")
+            {
+                esse = Bluep;
+            }
     }
 
     void OTriggerExit2D(Collider2D collision)
     {
         whoAudio = null;
+        esse = null;
     }
     public void fala(int quemFala)
     {
         if (quemFala == 1)
         {
+            source.PlayOneShot(esse);
+        }
+        else if (quemFala == 2)
+        {
+            source.PlayOneShot(player);
         }
     }
 }

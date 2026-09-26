@@ -1,8 +1,12 @@
 ﻿title: Bluep
 ---
 <<quemFala 2>>
+<<quemFalaAudio 2>>
+
 Bluep: Hello
 <<quemFala 1>>
+<<quemFalaAudio 1>>
+
 -> Hi...
 -> Fuckyou
 ===
