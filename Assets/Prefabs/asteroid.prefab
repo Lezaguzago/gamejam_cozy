@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Asteroid
   destroyedParticles: {fileID: 1135950252795707586, guid: 984f162aec0b79442a46fd2fe29b2eaf, type: 3}
   size: 3
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 763219470798116984, guid: ecf111d90c7de1a4bb5fcd0e2d90484f, type: 3}
 --- !u!50 &-3162455052827826349
 Rigidbody2D:
   serializedVersion: 5
