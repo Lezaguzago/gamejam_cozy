@@ -1,11 +1,13 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Asteroid asteroidPrefab;
-    [SerializeField] private Help helpPrefab;
+    [SerializeField] Asteroid asteroidPrefab;
+    [SerializeField] Help helpPrefab;
+    [SerializeField] List<Sprite> spriteList;
     public int asteroidCount = 0;
     int willSpawn;
     private int level = 0;
@@ -26,11 +28,9 @@ public class GameManager : MonoBehaviour
         if (asteroidCount == 0)
         {
             willSpawn = Random.Range(1, 5);
-            // Increase the level.
+
             level++;
 
-            // Spawn the correct number for this level.
-            // 1=>4, 2=>6, 3=>8, 4=>10 ...
             int numAsteroids = 1 + level;
             for (int i = 0; i < numAsteroids; i++)
             {
@@ -41,11 +41,9 @@ public class GameManager : MonoBehaviour
 
     private void SpawnAsteroid()
     {
-        // How far along the edge.
         float offset = Random.Range(0f, 1f);
         Vector2 viewportSpawnPosition = Vector2.zero;
 
-        // Which edge.
         int edge = Random.Range(0, 4);
         if (edge == 0)
         {
@@ -64,12 +62,17 @@ public class GameManager : MonoBehaviour
             viewportSpawnPosition = new Vector2(1, offset);
         }
 
-        // Create the asteroid.
         Vector2 worldSpawnPosition = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
         Asteroid asteroid = Instantiate(asteroidPrefab, worldSpawnPosition, Quaternion.identity);
         asteroid.gameManager = this;
 
-        if(willSpawn > 2)
+        if (spriteList.Count > 0 && asteroid.TryGetComponent<SpriteRenderer>(out SpriteRenderer sr))
+        {
+            int randomIndex = Random.Range(0, spriteList.Count);
+            sr.sprite = spriteList[randomIndex];
+        }
+
+        if (willSpawn > 2)
         {
             Vector2 worldSpawnPos = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
             Help help = Instantiate(helpPrefab, worldSpawnPosition, Quaternion.identity);

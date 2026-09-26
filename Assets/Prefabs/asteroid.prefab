@@ -109,6 +109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroid
   destroyedParticles: {fileID: 1135950252795707586, guid: 984f162aec0b79442a46fd2fe29b2eaf, type: 3}
+  spriteList:
+  - {fileID: -8502593868136243388, guid: 4652e8c6cba5bbf4c9db5935ce425328, type: 3}
+  - {fileID: 3960324142188012174, guid: 4652e8c6cba5bbf4c9db5935ce425328, type: 3}
+  - {fileID: -755804740585720767, guid: 4652e8c6cba5bbf4c9db5935ce425328, type: 3}
+  - {fileID: -5369080535260932406, guid: 4652e8c6cba5bbf4c9db5935ce425328, type: 3}
   size: 3
   gameManager: {fileID: 763219470798116984, guid: ecf111d90c7de1a4bb5fcd0e2d90484f, type: 3}
 --- !u!50 &-3162455052827826349
