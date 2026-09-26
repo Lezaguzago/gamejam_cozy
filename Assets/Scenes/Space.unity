@@ -661,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77229345974dae24889ab290534312dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollingBg
-  speed: 0.01
+  speed: 0.07
   bgRenderer: {fileID: 926079889}
 --- !u!23 &926079889
 MeshRenderer:
@@ -1152,6 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010ceecb47217204c8b5e95476d5064b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spaceShipScript
+  levelLoader: {fileID: 1793836477}
   shipSpeed: -50
   maxShipSpeed: -50
   whereLook: {x: 0, y: 0}
@@ -1320,6 +1321,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14f7f35f473ae6449ac62258acdedbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wrap
+--- !u!1001 &1793836476
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 806.12854
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 693.11206
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727076330523250652, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004985903292505092, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004985903292505092, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+--- !u!114 &1793836477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5768380518596549629, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
+  m_PrefabInstance: {fileID: 1793836476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d64caccd7e263148a528d5758292f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelLoaderScript
 --- !u!1 &1894425717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1838,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1793836476}
   - {fileID: 519420032}
   - {fileID: 1752900617}
   - {fileID: 1499500880664864389}

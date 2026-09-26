@@ -3,11 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    [SerializeField] LevelLoaderScript levelLoader;
+
     [SerializeField] GameObject painelMenu;
 
     public void Play()
     {
-        SceneManager.LoadScene("nave");
+        levelLoader.LoadNextLevel(1);
+
 
     }
 

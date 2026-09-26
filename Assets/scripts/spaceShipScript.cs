@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class spaceShipScript : MonoBehaviour
 {
+    [SerializeField] LevelLoaderScript levelLoader;
+
     [SerializeField] float shipSpeed = -10f;
     [SerializeField] float maxShipSpeed = -10f;
     [SerializeField] Vector2 whereLook;
@@ -96,7 +98,8 @@ public class spaceShipScript : MonoBehaviour
     {
         if (ctx.performed)
         {
-            SceneManager.LoadScene("nave");
+            levelLoader.LoadNextLevel(1);
+;
         }
     }
 }

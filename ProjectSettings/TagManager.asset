@@ -8,6 +8,9 @@ TagManager:
   - objeto
   - personagem
   - painel
+  - Asteroid
+  - Bullet
+  - objetoTrigger
   layers:
   - Default
   - TransparentFX

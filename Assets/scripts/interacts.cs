@@ -1,6 +1,7 @@
 using UnityEngine;
 using Yarn.Unity;
 using UnityEngine.SceneManagement;
+using NUnit.Framework;
 
 public class interacts : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class interacts : MonoBehaviour
     public bool estaConversando = false;
     
     public Animator anima;
+
+    public bool isTrigger;
 
     
 
@@ -67,8 +70,12 @@ public class interacts : MonoBehaviour
                 dia.StartDialogue(who);
             }
 
-            else if(conv == false && anima != null){
+            else if(conv == false && anima != null && isTrigger == false){
                 anima.SetBool("interagir", true);
+            }
+
+            else if(conv == false && anima != null && isTrigger == true){
+                anima.SetTrigger("interagir");
             }
 
             else if(who == "terminal")
@@ -86,6 +93,7 @@ public class interacts : MonoBehaviour
         {
             conv = true;
             anima = collision.gameObject.GetComponent<Animator>();
+            isTrigger = false;
 
         }
 
@@ -93,6 +101,15 @@ public class interacts : MonoBehaviour
         {
             conv = false;
             anima = collision.gameObject.GetComponent<Animator>();
+            isTrigger = false;
+
+        }
+
+        else if(collision.gameObject.tag == "objetoTrigger")
+        {
+            conv = false;
+            anima = collision.gameObject.GetComponent<Animator>();
+            isTrigger = true;
 
         }
 
@@ -102,6 +119,7 @@ public class interacts : MonoBehaviour
     {
         who = null;
         conv = false;
-        anima = null; 
+        anima = null;
+        isTrigger = false; 
     }
 }
