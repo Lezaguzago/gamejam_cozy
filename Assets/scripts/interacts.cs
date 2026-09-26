@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class interacts : MonoBehaviour
 {
+    [SerializeField] LevelLoaderScript levelLoader;
     public DialogueRunner dia;
     public string who;
     public bool conv;
@@ -72,7 +73,7 @@ public class interacts : MonoBehaviour
 
             else if(who == "terminal")
             {
-                SceneManager.LoadScene("Space");
+                levelLoader.LoadNextLevel(2);
 
             }
         }
