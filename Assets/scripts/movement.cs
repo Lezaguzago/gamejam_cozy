@@ -30,7 +30,7 @@ public class movement : MonoBehaviour
     {
         if (parado == false)
         {
-        rb2d.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb2d.linearVelocity.y);
+            rb2d.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb2d.linearVelocity.y);
         }
 
         if (escada == true && Mathf.Abs(verticalMovement) > 0)

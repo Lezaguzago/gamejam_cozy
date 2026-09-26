@@ -67,6 +67,7 @@ public class spaceShipScript : MonoBehaviour
                 RotateDirection(stick);
             }
         }
+        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxShipSpeed);
     }
 
     void RotateDirection(Vector3 direction)
@@ -88,7 +89,6 @@ public class spaceShipScript : MonoBehaviour
         if (ctx.performed)
         {
             rb.AddForce(shipSpeed * transform.right);
-            rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxShipSpeed);
             Rigidbody2D fire = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
             fire.AddForce(bulletSpeed * transform.right, ForceMode2D.Impulse);
         }
