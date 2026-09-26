@@ -31,7 +31,7 @@ public class PointsManager : MonoBehaviour
     }
     IEnumerator NewAlien()
     {
-        saved.text = "SAVED";
+        saved.text = "RESCUED";
         yield return new WaitForSeconds(1f);
         saved.text = "";
         GeralManager.instance.saved = false;
