@@ -22,7 +22,7 @@ public class movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        anima = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +46,16 @@ public class movement : MonoBehaviour
         else if (horizontalMovement < 0)
         {
             sr.flipX = false;
+        }
+
+        if (horizontalMovement != 0 && parado == false)
+        {
+            anima.SetBool("andando", true);
+        }
+
+        else
+        {
+            anima.SetBool("andando", false);
         }
     }
 
