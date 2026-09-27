@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4451d1a6bebd3b64c89c25765d074691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Help
+  helpAudio: {fileID: 8300000, guid: 8c694ad7ef41eda40a04881541e1a8b8, type: 3}
 --- !u!114 &8125284143228554392
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class Asteroid : MonoBehaviour
 {
     [SerializeField] private ParticleSystem destroyedParticles;
     [SerializeField] List<Sprite> spriteList;
+    [SerializeField] AudioClip destroyAudio;
     public int size = 3;
 
     public GameManager gameManager;
@@ -27,7 +28,7 @@ public class Asteroid : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             GameManager.instance.asteroidCount--;
-
+            SFXManager.Instance.PlaySoundFXClip(destroyAudio, transform, 1f);
             Destroy(collision.gameObject);
 
             if (size > 1)
@@ -58,6 +59,7 @@ public class Asteroid : MonoBehaviour
         {
             GameManager.instance.asteroidCount--;
             GeralManager.instance.pontos -= 10 * size;
+            SFXManager.Instance.PlaySoundFXClip(destroyAudio, transform, 1f);
             Instantiate(destroyedParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

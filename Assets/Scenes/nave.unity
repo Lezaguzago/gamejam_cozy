@@ -1245,6 +1245,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ec180e5b166bfb44f9819c7a476b6288, type: 3}
     - target: {fileID: 8800404915062178329, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0261513
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800404915062178329, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      propertyPath: m_Size.y
+      value: 2.830768
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800404915062178329, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.14382799
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800404915062178329, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03867817
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800404915062178329, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5.4857144
       objectReference: {fileID: 0}
@@ -1255,8 +1271,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 894608025}
   m_SourcePrefab: {fileID: 100100000, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+--- !u!1 &894608024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+  m_PrefabInstance: {fileID: 894608023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &894608025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894608024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a384a5a739e14b82ae38dd94fe0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceShipAliens
+  spawnThis: 1000
 --- !u!1001 &910946338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2010,7 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8a384a5a739e14b82ae38dd94fe0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpaceShipAliens
-  spawnThis: 1
+  spawnThis: 2
 --- !u!1 &1034777094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,7 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8a384a5a739e14b82ae38dd94fe0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpaceShipAliens
-  spawnThis: 10
+  spawnThis: 4
 --- !u!1 &1125957364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,8 +3182,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545486142}
   m_SourcePrefab: {fileID: 100100000, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+--- !u!1 &1545486141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068156058422758656, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
+  m_PrefabInstance: {fileID: 1545486140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1545486142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545486141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a384a5a739e14b82ae38dd94fe0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceShipAliens
+  spawnThis: 1
 --- !u!1 &1624008140
 GameObject:
   m_ObjectHideFlags: 0

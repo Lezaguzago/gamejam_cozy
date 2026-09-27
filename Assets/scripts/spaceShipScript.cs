@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class spaceShipScript : MonoBehaviour
 {
     [SerializeField] LevelLoaderScript levelLoader;
-
+    [SerializeField] AudioClip shotClip;
     [SerializeField] float shipSpeed = -10f;
     [SerializeField] float maxShipSpeed = -10f;
     [SerializeField] Vector2 whereLook;
@@ -90,6 +90,7 @@ public class spaceShipScript : MonoBehaviour
         {
             rb.AddForce(shipSpeed * transform.right);
             Rigidbody2D fire = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+            SFXManager.Instance.PlaySoundFXClip(shotClip, transform, 1f);
             fire.AddForce(bulletSpeed * transform.right, ForceMode2D.Impulse);
         }
     }

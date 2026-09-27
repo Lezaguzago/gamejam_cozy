@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Help : MonoBehaviour
 {
+    [SerializeField] AudioClip helpAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +25,7 @@ public class Help : MonoBehaviour
             GeralManager.instance.saved = true;
             GeralManager.instance.lifeSaveds += 1;
             GameManager.instance.isSpawned = false;
+            SFXManager.Instance.PlaySoundFXClip(helpAudio, transform, 1f);
             Destroy(gameObject);
         }
     }
