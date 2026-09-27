@@ -2003,7 +2003,7 @@ MonoBehaviour:
   player1: {fileID: 8300000, guid: 87260f80a202bfc42a927ad2d7bdcae8, type: 3}
   player2: {fileID: 8300000, guid: c0e364fa56a73ab49860025a06f2a7c9, type: 3}
   player3: {fileID: 8300000, guid: f6f0099d9dd4e234eb3168c94f287b78, type: 3}
-  Bluep: {fileID: 8300000, guid: 94177f69ed1076d4180b1b1db25e7ac5, type: 3}
+  Bluep: {fileID: 8300000, guid: 0e086aae4225ab5499ff2a89c0ff159f, type: 3}
   grojj: {fileID: 8300000, guid: 9b8ba00a985f6f34abf4ede2ed6dbc58, type: 3}
   klaudio: {fileID: 8300000, guid: 220a2a1dfcec0ac4cb2df15559af140b, type: 3}
   whoAudio: 
@@ -3839,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004985903292505092, guid: d5d103156a6b5ff4182e34a672c06bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
