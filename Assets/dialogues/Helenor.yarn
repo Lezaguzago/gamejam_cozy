@@ -1,8 +1,16 @@
-﻿title: Helenor
+﻿title: helenor
 ---
-Helenor: For all the sprouts and seeds your ship is beautiful!
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Helenor: For all the sprouts and seeds, your ship is beautiful!
+<<quemFala 1>>
+<<quemFalaAudio 1>>
 Thank you lady
+<<quemFala 2>>
+<<quemFalaAudio 2>>
 Helenor: How did you get so many different plant species to survive in your ship
+<<quemFala 1>>
+<<quemFalaAudio 1>>
 A little bit of terrestrial technology
 ->So, where are you from?
     <<jump Where>>
@@ -11,8 +19,14 @@ A little bit of terrestrial technology
 ===
 title: Where
 ---
+<<quemFala 2>>
+<<quemFalaAudio 2>>
 Helenor: I don't have a so called place
+<<quemFala 1>>
+<<quemFalaAudio 1>>
 Are you fine?
+<<quemFala 2>>
+<<quemFalaAudio 2>>
 Helenor: Yes, yes, I never had a place, my species was one of the first to really get into the space business.
 Helenor: We are travelling for so long that we forgot where we came from
 Helenor: I do consider you earthlings strange for being so sacred with your roots
@@ -21,11 +35,19 @@ Helenor: I do consider you earthlings strange for being so sacred with your root
 ===
 title: What
 ---
+<<quemFala 2>>
+<<quemFalaAudio 2>>
 Helenor: I'm travelling
+<<quemFala 1>>
+<<quemFalaAudio 1>>
 Wich destination?
+<<quemFala 2>>
+<<quemFalaAudio 2>>
 Helenor: Oh no!
 Helenor: No destination
 Helenor: I like to go around trying to discover and taste all kinds of greens
+<<quemFala 1>>
+<<quemFalaAudio 1>>
 Please don't eat my ship
 <<quemFala 0>>
 

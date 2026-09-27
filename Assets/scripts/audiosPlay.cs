@@ -14,6 +14,7 @@ public class audiosPlay : MonoBehaviour
     public AudioClip grojj;
     public AudioClip klaudio;
 
+    public AudioClip helenor;
     public AudioClip zyrella;
 
     private AudioClip esse;
@@ -57,6 +58,10 @@ public class audiosPlay : MonoBehaviour
         else if (whoAudio == "Zyrella")
             {
                 esse = zyrella;
+            }
+        else if(whoAudio == "helenor")
+            {
+                esse = helenor;
             }
     }
 
