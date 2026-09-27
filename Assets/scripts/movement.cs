@@ -73,7 +73,7 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (escalando == true)
+        if (escalando == true && parado == false)
         {
             rb2d.gravityScale = 0f;
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, verticalMovement * moveEscada);
