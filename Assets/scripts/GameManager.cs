@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             sr.sprite = spriteList[randomIndex];
         }
 
-        if (level%2 == 0 && !isSpawned)
+        if (level%2 == 0 && !isSpawned && GeralManager.instance.lifeSaveds < 5)
         {
             isSpawned = true;
             Vector2 worldSpawnPos = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);

@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcb1616119cbe94ea3d8fdc1ba3765c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloatEffect
-  speed: -3
+  speed: 3
   floatStrength: 3
 --- !u!50 &1342164905
 Rigidbody2D:
