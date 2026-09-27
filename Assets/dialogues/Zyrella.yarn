@@ -1,0 +1,62 @@
+﻿title: Zyrella
+---
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: Are you imperial?
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+No, why?
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: Who are you working for?
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+I am from an organization without borders.
+We don't work under the empire.
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: Good...
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+-> Are you fine ma'am?
+    <<jump fine>>
+-> Where do you want me to drop you off?
+    <<jump drop>>
+===
+title: fine
+---
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: I'm sorry, it all happened so fast
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+What happened?
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: The empire came and started to take all the resources from my planet
+Zyrella: Last month they said the its core was at danger and we would have to move to another sector
+Zyrella: My husband wasn't a criminal, he was a righteous man, but we didn't want to lose our home
+Zyrella: He was at the latest protest
+Zyrella: Things escalated to quick and I haven't heard from him since then
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+Let's get you a cup of hot tea to calm you down
+<<quemFala 0>>
+
+===
+title: drop
+---
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: The only place I know is my planet
+Zyrella: And I can't come back to it anymore
+<<quemFalaAudio 1>>
+<<quemFala 1>>
+I know someplace where you can stay for sometime
+With no imperials
+<<quemFala 2>>
+<<quemFalaAudio 2>>
+Zyrella: Thank you...
+<<quemFala 0>>
+
+===

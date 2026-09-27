@@ -14,6 +14,8 @@ public class audiosPlay : MonoBehaviour
     public AudioClip grojj;
     public AudioClip klaudio;
 
+    public AudioClip zyrella;
+
     private AudioClip esse;
     public string whoAudio;
 
@@ -51,6 +53,10 @@ public class audiosPlay : MonoBehaviour
         else if (whoAudio == "Klaudio")
             {
                 esse = klaudio;
+            }
+        else if (whoAudio == "Zyrella")
+            {
+                esse = zyrella;
             }
     }
 

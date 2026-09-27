@@ -1,0 +1,32 @@
+﻿title: Helenor
+---
+Helenor: For all the sprouts and seeds your ship is beautiful!
+Thank you lady
+Helenor: How did you get so many different plant species to survive in your ship
+A little bit of terrestrial technology
+->So, where are you from?
+    <<jump Where>>
+->What are you doing here?
+    <<jump What>>
+===
+title: Where
+---
+Helenor: I don't have a so called place
+Are you fine?
+Helenor: Yes, yes, I never had a place, my species was one of the first to really get into the space business.
+Helenor: We are travelling for so long that we forgot where we came from
+Helenor: I do consider you earthlings strange for being so sacred with your roots
+<<quemFala 0>>
+
+===
+title: What
+---
+Helenor: I'm travelling
+Wich destination?
+Helenor: Oh no!
+Helenor: No destination
+Helenor: I like to go around trying to discover and taste all kinds of greens
+Please don't eat my ship
+<<quemFala 0>>
+
+===
