@@ -1,12 +1,19 @@
 using UnityEngine;
+using Yarn.Compiler;
 using Yarn.Unity;
 
 public class audiosPlay : MonoBehaviour
 
 {
     public AudioSource source;
-    public AudioClip player;
+    public AudioClip player1;
+    public AudioClip player2;
+    public AudioClip player3;
+
     public AudioClip Bluep;
+    public AudioClip grojj;
+    public AudioClip klaudio;
+
     private AudioClip esse;
     public string whoAudio;
 
@@ -37,6 +44,14 @@ public class audiosPlay : MonoBehaviour
             {
                 esse = Bluep;
             }
+        else if (whoAudio == "Grojj")
+            {
+                esse = grojj;
+            }
+        else if (whoAudio == "Klaudio")
+            {
+                esse = klaudio;
+            }
     }
 
     void OTriggerExit2D(Collider2D collision)
@@ -52,7 +67,20 @@ public class audiosPlay : MonoBehaviour
         }
         else if (quemFala == 1)
         {
-            source.PlayOneShot(player);
+
+            int num = Random.Range(1, 4);
+            if(num == 1)
+            {
+                source.PlayOneShot(player1);
+            }
+            else if(num == 2)
+            {
+                source.PlayOneShot(player2);
+            }
+            else if(num == 3)
+            {
+                source.PlayOneShot(player3);
+            }
         }
     }
 }

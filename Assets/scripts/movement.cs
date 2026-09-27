@@ -36,6 +36,7 @@ public class movement : MonoBehaviour
         if (escada == true && Mathf.Abs(verticalMovement) > 0)
         {
             escalando = true;
+            anima.SetBool("escada", true);
         }
 
         if (horizontalMovement > 0)
@@ -56,6 +57,17 @@ public class movement : MonoBehaviour
         else
         {
             anima.SetBool("andando", false);
+        }
+
+        if (verticalMovement != 0)
+        {
+            anima.SetBool("escada_parada", false);
+
+        }
+        else if (verticalMovement == 0)
+        {
+            anima.SetBool("escada_parada", true);
+
         }
     }
 
@@ -90,7 +102,7 @@ public class movement : MonoBehaviour
         verticalMovement = context.ReadValue<Vector2>().y;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("escada"))
         {
@@ -102,5 +114,7 @@ public class movement : MonoBehaviour
     {
         escada = false;
         escalando = false;
+        anima.SetBool("escada", false);
+
     }
 }

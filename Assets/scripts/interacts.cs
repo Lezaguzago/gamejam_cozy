@@ -9,12 +9,14 @@ public class interacts : MonoBehaviour
     public DialogueRunner dia;
     public string who;
     public bool conv;
-
+    public Animator animap;
     public bool estaConversando = false;
     
     public Animator anima;
 
     public bool isTrigger;
+
+    public bool grojj = false;
 
     
 
@@ -50,14 +52,18 @@ public class interacts : MonoBehaviour
         if (quemFala == 2)
         {
             anima.SetBool("charFalando", true);
+            animap.SetBool("fala", false);
+
         }
         else if(quemFala == 1)
         {
             anima.SetBool("charFalando", false);
+            animap.SetBool("fala", true);
         }
         else if(quemFala == 0)
         {
             anima.SetBool("charFalando", false);
+            animap.SetBool("fala", false);
         }
     }
 
@@ -65,9 +71,25 @@ public class interacts : MonoBehaviour
     {
         if (estaConversando == false)
         {
-            if (conv == true)
+            if (conv == true && grojj == false)
             {
                 dia.StartDialogue(who);
+            }
+
+            else if (conv == true && grojj == true)
+            {
+                int num = Random.Range(1, 6);
+                if (num == 5)
+                {
+                    
+                    dia.StartDialogue(who);
+
+                }
+
+                else
+                {
+                    dia.StartDialogue("grojnt");
+                }
             }
 
             else if(conv == false && anima != null && isTrigger == false){
@@ -97,6 +119,14 @@ public class interacts : MonoBehaviour
 
         }
 
+        else if(collision.gameObject.tag == "grojj")
+        {
+            conv = true;
+            grojj = true;
+            anima = collision.gameObject.GetComponent<Animator>();
+            isTrigger = false;
+        }
+
         else if(collision.gameObject.tag == "objeto")
         {
             conv = false;
@@ -121,5 +151,6 @@ public class interacts : MonoBehaviour
         conv = false;
         anima = null;
         isTrigger = false; 
+        grojj = false;
     }
 }
