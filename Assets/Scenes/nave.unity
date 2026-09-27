@@ -1372,7 +1372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005523770777175253, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.39
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 6005523770777175253, guid: e39c808d9e7f32145957d4238a852bee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1717,7 +1717,7 @@ Transform:
   m_GameObject: {fileID: 960017866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.218, y: 0.59, z: 0}
+  m_LocalPosition: {x: 0.35, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2136,7 +2136,7 @@ Transform:
   m_GameObject: {fileID: 1034777094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.218, y: 2.59, z: -10}
+  m_LocalPosition: {x: 0.35, y: 1.4799999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3373,6 +3373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tortadeabobora
       objectReference: {fileID: 0}
+    - target: {fileID: 5542335056632718820, guid: 2053399e0c6998c49a15f7916137d62a, type: 3}
+      propertyPath: m_TagString
+      value: objeto
+      objectReference: {fileID: 0}
     - target: {fileID: 6870158641188577857, guid: 2053399e0c6998c49a15f7916137d62a, type: 3}
       propertyPath: m_Size.x
       value: 3.2038956
@@ -3620,7 +3624,7 @@ Transform:
   m_GameObject: {fileID: 2087396858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.218, y: 2.59, z: -10}
+  m_LocalPosition: {x: 0.35, y: 1.4799999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

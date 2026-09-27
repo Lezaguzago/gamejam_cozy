@@ -18,7 +18,6 @@ public class interacts : MonoBehaviour
 
     public bool grojj = false;
 
-    
 
 
     public void Awake()
